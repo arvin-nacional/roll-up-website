@@ -189,10 +189,10 @@
         <div class="row">
           <div class="col-xl-6 col-lg-6">
             <div class="breadcrumb-content">
-              <h2>Contact</h2>
+              <h2>Error</h2>
               <ul>
                 <li><a href="index.html">Home</a></li>
-                <li>Contact</li>
+                <li>Error</li>
               </ul>
             </div>
           </div>
@@ -201,136 +201,23 @@
     </div>
     <!-- breadcrumb end -->
 
-    <!-- contact section begin -->
-    <div class="contact-section">
+    <!-- error 404 begin -->
+    <div class="error-404">
       <div class="container">
-        <div class="row">
-          <div class="col-xl-12 col-lg-12">
-            <div class="address-area">
-              <div class="row">
-                <div class="col-xl-4 col-lg-4 col-md-6">
-                  <div class="single-address-card">
-                    <div class="part-icon">
-                      <img src="assets/img/svg/phone1.svg" alt="" />
-                    </div>
-                    <div class="part-text">
-                      <span class="title">Call Us Now:</span>
-                      <span class="info">0999-663-7758</span>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="col-xl-4 col-lg-4 col-md-6">
-                  <div class="single-address-card">
-                    <div class="part-icon">
-                      <img src="assets/img/svg/email.svg" alt="" />
-                    </div>
-                    <div class="part-text">
-                      <span class="title">Mail Us Now:</span>
-                      <span class="info">frkakai0012@gmail.com</span>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="col-xl-4 col-lg-4 col-md-6">
-                  <div class="single-address-card">
-                    <div class="part-icon">
-                      <img src="assets/img/svg/location.svg" alt="" />
-                    </div>
-                    <div class="part-text">
-                      <span class="title">Office Address:</span>
-                      <span class="info"
-                        >6674A Mabini Street, Caloocan City</span
-                      >
-                    </div>
-                  </div>
-                </div>
+        <div class="row justify-content-center">
+          <div class="col-xl-8 col-lg-8">
+            <div class="error-content">
+              <div class="part-img">
+                <img src="assets/img/404.png" alt="" />
               </div>
+              <h3><span class="marked">Opps! </span>Page not found</h3>
+              <a href="index.html" class="back-button">Go back to home</a>
             </div>
-          </div>
-          <div class="col-xl-6 col-lg-6">
-            <div class="contact-form">
-              <h3>
-                Contact us to make appointment with
-                <span class="marked">our consultant.</span>
-              </h3>
-              <form id="contact-form-main">
-                <input type="text" id="name" placeholder="Full Name*" />
-                <input type="email" id="email" placeholder="Email*" />
-                <input type="text" id="phone" placeholder="Phone*" />
-                <div class="select-box">
-                  <div class="icon">
-                    <i class="fas fa-angle-down"></i>
-                  </div>
-                  <select id="service" class="select">
-                    <option>Select a service</option>
-                    <option>Installation</option>
-                    <option>Custom Design</option>
-                    <option>Repairs and Maintenance</option>
-                    <option>Emergency Services</option>
-                    <option>Replacement</option>
-                    <option>Security and Access Control</option>
-                  </select>
-                </div>
-                <textarea id="message" placeholder="write.."></textarea>
-                <button
-                  type="submit"
-                  onclick="sendEmail(event)"
-                  style="margin-bottom: 30px"
-                >
-                  Submit
-                </button>
-              </form>
-            </div>
-          </div>
-          <div class="col-xl-6 col-lg-6 col-md-6">
-            <img
-              src="assets/img/contact-image4.png"
-              alt="contact"
-              height="100%"
-              style="object-fit: cover"
-            />
           </div>
         </div>
       </div>
     </div>
-
-    <script>
-      function sendEmail(event) {
-        event.preventDefault();
-
-        const userName = document.getElementById("name").value;
-        const email = document.getElementById("email").value;
-        const phoneNumber = document.getElementById("phone").value;
-        const service = document.getElementById("service").value;
-        const message = document.getElementById("message").value;
-
-        // Check if any required field is empty
-        if (!userName || !phoneNumber || !email || !service || !message) {
-          alert("Please fill in all required fields.");
-          return; // Stop the function from proceeding further
-        }
-
-        emailjs
-          .send("service_strlo89", "template_nkqmy1n8", {
-            name: userName,
-            phone: phoneNumber,
-            message: message,
-            email: email,
-            service: service,
-          })
-          .then(
-            function (response) {
-              alert("Email sent successfully!");
-              document.getElementById("contact-form-main").reset();
-            },
-            function (error) {
-              alert("Error sending email: " + error);
-            }
-          );
-      }
-    </script>
-    <!-- contact section end -->
+    <!-- error 404 end -->
 
     <!-- footer begin -->
     <div class="footer">
@@ -386,12 +273,12 @@
                   </li>
 
                   <!-- <li>
-                    <a href="#"
-                      ><span class="icon"
-                        ><i class="fas fa-chevron-right"></i></span
-                      ><span class="text">Testimonials</span></a
-                    >
-                  </li> -->
+                      <a href="#"
+                        ><span class="icon"
+                          ><i class="fas fa-chevron-right"></i></span
+                        ><span class="text">Testimonials</span></a
+                      >
+                    </li> -->
                   <li>
                     <a href="contact.html"
                       ><span class="icon"
@@ -434,53 +321,53 @@
           </div>
 
           <!-- <div class="col-xl-3 col-lg-3 col-md-6">
-            <div class="single-widget">
-              <div class="gallery-area">
-                <h3>gallery</h3>
-                <div class="g-row">
-                  <div class="single-photo">
-                    <img src="assets/img/gallery-1.png" alt="" />
-                    <div class="content-on-image">
-                      <a href="#"><i class="fas fa-plus"></i></a>
+              <div class="single-widget">
+                <div class="gallery-area">
+                  <h3>gallery</h3>
+                  <div class="g-row">
+                    <div class="single-photo">
+                      <img src="assets/img/gallery-1.png" alt="" />
+                      <div class="content-on-image">
+                        <a href="#"><i class="fas fa-plus"></i></a>
+                      </div>
+                    </div>
+                    <div class="single-photo">
+                      <img src="assets/img/gallery-2.jpg" alt="" />
+                      <div class="content-on-image">
+                        <a href="#"><i class="fas fa-plus"></i></a>
+                      </div>
+                    </div>
+                    <div class="single-photo">
+                      <img src="assets/img/gallery-3.jpg" alt="" />
+                      <div class="content-on-image">
+                        <a href="#"><i class="fas fa-plus"></i></a>
+                      </div>
                     </div>
                   </div>
-                  <div class="single-photo">
-                    <img src="assets/img/gallery-2.jpg" alt="" />
-                    <div class="content-on-image">
-                      <a href="#"><i class="fas fa-plus"></i></a>
+                  <div class="g-row">
+                    <div class="single-photo">
+                      <img src="assets/img/gallery-4.jpg" alt="" />
+                      <div class="content-on-image">
+                        <a href="#"><i class="fas fa-plus"></i></a>
+                      </div>
                     </div>
-                  </div>
-                  <div class="single-photo">
-                    <img src="assets/img/gallery-3.jpg" alt="" />
-                    <div class="content-on-image">
-                      <a href="#"><i class="fas fa-plus"></i></a>
+                    <div class="single-photo">
+                      <img src="assets/img/gallery-5.jpg" alt="" />
+                      <div class="content-on-image">
+                        <a href="#"><i class="fas fa-plus"></i></a>
+                      </div>
                     </div>
-                  </div>
-                </div>
-                <div class="g-row">
-                  <div class="single-photo">
-                    <img src="assets/img/gallery-4.jpg" alt="" />
-                    <div class="content-on-image">
-                      <a href="#"><i class="fas fa-plus"></i></a>
-                    </div>
-                  </div>
-                  <div class="single-photo">
-                    <img src="assets/img/gallery-5.jpg" alt="" />
-                    <div class="content-on-image">
-                      <a href="#"><i class="fas fa-plus"></i></a>
-                    </div>
-                  </div>
-
-                  <div class="single-photo">
-                    <img src="assets/img/gallery-6.jpg" alt="" />
-                    <div class="content-on-image">
-                      <a href="#"><i class="fas fa-plus"></i></a>
+  
+                    <div class="single-photo">
+                      <img src="assets/img/gallery-6.jpg" alt="" />
+                      <div class="content-on-image">
+                        <a href="#"><i class="fas fa-plus"></i></a>
+                      </div>
                     </div>
                   </div>
                 </div>
               </div>
-            </div>
-          </div> -->
+            </div> -->
         </div>
       </div>
     </div>
@@ -501,37 +388,37 @@
             </div>
           </div>
           <!-- <div class="col-xl-6 col-lg-6">
-            <div class="social-area">
-              <ul>
-                <li>Follow us:</li>
-                <li class="social">
-                  <a href="#">
-                    <i class="fab fa-facebook-f"></i>
-                  </a>
-                </li>
-                <li class="social">
-                  <a href="#">
-                    <i class="fab fa-twitter"></i>
-                  </a>
-                </li>
-                <li class="social">
-                  <a href="#">
-                    <i class="fab fa-linkedin-in"></i>
-                  </a>
-                </li>
-                <li class="social">
-                  <a href="#">
-                    <i class="fab fa-google-plus-g"></i>
-                  </a>
-                </li>
-                <li class="social">
-                  <a href="#">
-                    <i class="fas fa-rss"></i>
-                  </a>
-                </li>
-              </ul>
-            </div>
-          </div> -->
+              <div class="social-area">
+                <ul>
+                  <li>Follow us:</li>
+                  <li class="social">
+                    <a href="#">
+                      <i class="fab fa-facebook-f"></i>
+                    </a>
+                  </li>
+                  <li class="social">
+                    <a href="#">
+                      <i class="fab fa-twitter"></i>
+                    </a>
+                  </li>
+                  <li class="social">
+                    <a href="#">
+                      <i class="fab fa-linkedin-in"></i>
+                    </a>
+                  </li>
+                  <li class="social">
+                    <a href="#">
+                      <i class="fab fa-google-plus-g"></i>
+                    </a>
+                  </li>
+                  <li class="social">
+                    <a href="#">
+                      <i class="fas fa-rss"></i>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div> -->
         </div>
       </div>
     </div>
